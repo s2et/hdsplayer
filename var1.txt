@@ -1,1 +1,3 @@
-/home/s2/Documents/hrvOSimg/HRVOS.png
+/home/display1/Videos/mpv-shot0001.jpg
+/home/display1/Videos/verti.mp4
+/home/s2/Documents/hrvOSimg/logo1.png

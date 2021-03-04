@@ -36,6 +36,7 @@ def cnr1():
                   if vx>0 :
                       if vh== nw.strftime("%H"):
                              if vm==nw.strftime("%M"):
+                                    subprocess.Popen(['python3','/home/s2/Documents/hds/pnp.py'],stdout=subprocess.PIPE)
                                     for pt in vd:
                                            if pt in dp[t]:
                                                subprocess.run(["mpv","--fullscreen",dp[t]])
@@ -43,7 +44,8 @@ def cnr1():
                                     for pt in id:
                                            if pt in dp[t]:
                                                subprocess.run(["mpv","--fullscreen","--image-display-duration",str(vx),dp[t]])
-                                               print(dp[t]) 
+                                               print(dp[t])
+                                    subprocess.Popen(['python3','/home/s2/Documents/hds/pnp.py'],stdout=subprocess.PIPE)
 
                   t+=1
 
