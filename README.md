@@ -4,6 +4,7 @@ Runs on python3
 depnedencies: python3-tk(),ffmpeg,mpv
 
 **#hdsplayer: altareto version modules** 
+
 #module0.py
 Executes module1 and module2 in pipe
 
