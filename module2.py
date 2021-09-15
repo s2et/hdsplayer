@@ -10,6 +10,7 @@ def loop():
          pid=re.read()
          re.close()
          print(pid)
+         ft.storlines("STOR ack.txt",io.BytesIO(b'Running'))
          if nt=="Stat":
              subprocess.run(["top","-p",pid," -b"," -n"," 1",">","st.txt"])
              fl=open("/home/firefly/Documents/altareto/st.txt","r")
