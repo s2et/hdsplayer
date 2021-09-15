@@ -16,10 +16,14 @@ li.close()
 print("tt",tt,len(tt))
 def ply(tt):
   for data in tt:
+      duration = subprocess.check_output(['ffprobe', '-i', data, '-show_entries', 'format=duration', '-v', 'quiet', '-of', 'csv=%s' % ("p=0")])
       media=vlc.Media(data)
       playa.set_media(media)
       playa.play()
-      time.sleep(15)
+      if duration==b'N/A\n':
+         time.sleep(15)
+      else:
+         time.sleep(duration)
 def stp():
       playa.stop()
 while 1:
