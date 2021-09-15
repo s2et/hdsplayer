@@ -11,7 +11,7 @@ Executes module1 and module2 in pipe
 
 #module1.py
 
-depndencies: python3-vlc
+depndencies: python3-vlc, ffmpeg
 
 Extracts urls and plays in vlc
 
