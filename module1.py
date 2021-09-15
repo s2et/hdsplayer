@@ -21,9 +21,10 @@ def ply(tt):
       playa.set_media(media)
       playa.play()
       if duration==b'N/A\n':
-         time.sleep(15)
+         time.sleep(20)
       else:
-         time.sleep(duration)
+         dur=float(duration.decode().split('\n')[0])
+         time.sleep(dur)
 def stp():
       playa.stop()
 while 1:
