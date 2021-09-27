@@ -11,7 +11,7 @@ Executes module0ext, module1 and module2 in pipe
 
 #module0ext.py
 
-Tkinter gui with functions to start and stop(local) from device end
+Tkinter gui with functions to start and stop signage locally on display-end
 
 #module1.py
 
