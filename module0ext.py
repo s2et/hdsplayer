@@ -1,0 +1,35 @@
+import os, subprocess, time, signal, io
+from ftplib import FTP 
+from tkinter import * 
+from tkinter.ttk import *
+root = Tk() 
+root.wm_iconbitmap('@/home/firefly/Documents/altareto/favicon.xbm')
+root.wm_title('HDS Player v1.4')
+root.geometry('350x600')
+lb=Label(root, text = ("HRV Digital Signage Player"),font =('Georgia', 14))
+lb.grid(row=0,column=100,columnspan=10)
+lb=Label(root, text = ("part of hrvOS and"),font =('Georgia', 10))
+lb.grid(row=10,column=100,columnspan=10)
+lb=Label(root, text = ("ALTA RETO De Reklamo"),font =('Georgia', 12))
+lb.grid(row=20,column=100,columnspan=10)
+lb=Label(root, text = ("commissioned under"),font =('Georgia', 10))
+lb.grid(row=30,column=100,columnspan=10)
+lb=Label(root, text = ("HRV Displays"),font =('Georgia', 12))
+lb.grid(row=40,column=100,columnspan=10)
+lb=Label(root, text = ("an S2ECOTECH product"),font =('Georgia', 10))
+lb.grid(row=500,column=100,columnspan=10)
+def strt():
+        subprocess.Popen("python3 /home/firefly/Documents/altareto/module0.py", shell = True)
+def stp():
+        re=open("/home/firefly/Documents/altareto/tmp.txt","r")
+        pid=re.read()
+        re.close()
+        subprocess.run(["kill",pid])
+        ft=FTP("ftp.s2ecotech.com","gftp@guc.s2ecotech.com","0863s2ecotech")
+        da=io.BytesIO(b'stopped')
+        ft.storlines("STOR ack.txt",da)
+btn=Button(root, text ='Start', command = lambda:strt())
+btn.grid(row=100,column=100)
+btn=Button(root, text ='Stop', command = lambda:stp())
+btn.grid(row=100,column=105)
+mainloop()
