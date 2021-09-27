@@ -7,7 +7,11 @@ depnedencies: python3-tk(),ffmpeg,mpv
 
 #module0.py
 
-Executes module1 and module2 in pipe
+Executes module0ext, module1 and module2 in pipe
+
+#module0ext.py
+
+Tkinter gui with functions to start and stop(local) from device end
 
 #module1.py
 
